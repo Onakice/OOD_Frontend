@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Hilbert's Hotel Management</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Rond mayer du Sieur Hotel</h1>
+        <img src="https://www.iledefrance-paris-hotel.com/_novaimg/4635866-1426740_0_0_4094_2786_1000_680.jpg" alt="Hotel Image" style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
+        <div id="message" class="message"></div>
+        
+        <button id="toggleAddRoomFormBtn"><i class="fas fa-plus"></i> Add Room</button>
+        <form id="addRoomForm" class="hidden">
+            <h2>Add Room</h2>
+            <label for="fleet">Fleet Number:</label>
+            <input type="number" id="fleet" required>
+            <label for="ship">Ship Number:</label>
+            <input type="number" id="ship" required>
+            <label for="bus">Bus Number:</label>
+            <input type="number" id="bus" required>
+            <label for="guest">Guest Number:</label>
+            <input type="number" id="guest" required>
+            <button type="submit"><i class="fas fa-plus"></i> Add Room</button>
+        </form>
+
+        <button id="toggleAddMultipleRoomsFormBtn">Add Multiple Rooms</button>
+        <form id="addMultipleRoomsForm" class="hidden">
+            <h2>Add Multiple Rooms</h2>
+            <label for="fleetStart">Fleet Start:</label>
+            <input type="number" id="fleetStart" required>
+            <label for="fleetEnd">Fleet End:</label>
+            <input type="number" id="fleetEnd" required>
+    
+            <label for="shipStart">Ship Start:</label>
+            <input type="number" id="shipStart" required>
+            <label for="shipEnd">Ship End:</label>
+            <input type="number" id="shipEnd" required>
+    
+            <label for="busStart">Bus Start:</label>
+            <input type="number" id="busStart" required>
+            <label for="busEnd">Bus End:</label>
+            <input type="number" id="busEnd" required>
+    
+            <label for="guestStart">Guest Start:</label>
+            <input type="number" id="guestStart" required>
+            <label for="guestEnd">Guest End:</label>
+            <input type="number" id="guestEnd" required>
+    
+            <button type="submit"><i class="fas fa-plus"></i> Add Multiple Rooms</button>
+        </form>
+    
+        <form id="removeRoomForm">
+            <h2>Remove Room</h2>
+            <label for="removeRoomNumber">Room Number:</label>
+            <input type="number" id="removeRoomNumber" required>
+            <button type="submit"><i class="fas fa-trash"></i> Remove Room</button>
+        </form>
+
+        <!-- Align these two buttons in a row -->
+        <div style="display: flex; justify-content: space-between;">
+            <button id="showEmptyRoomsBtn"><i class="fas fa-eye"> Show Empty Rooms</i></button>
+            <button id="sortRoomsBtn"><i class="fas fa-sort"></i>Sort Rooms</button>
+        </div>
+    
+        <form id="findRoomForm">
+            <h2>Find Room</h2>
+            <label for="findRoomNumber">Room Number:</label>
+            <input type="number" id="findRoomNumber" required>
+            <button type="submit"><i class="fas fa-search"></i> Find Room</button>
+        </form>
+    
+        <form id="saveDataForm">
+            <h2>Save Data</h2>
+            <label for="fileName">File Name:</label>
+            <input type="text" id="fileName" required>
+            <button type="submit"><i class="fas fa-save"></i> Save Data</button>
+        </form>
+    
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

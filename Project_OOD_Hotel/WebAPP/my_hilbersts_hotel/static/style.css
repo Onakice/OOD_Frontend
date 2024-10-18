@@ -1,0 +1,153 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+h1, h2 {
+    color: #3b3b3b;
+    text-align: center;
+    font-weight: 300;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #555;
+    border-bottom: 2px solid #28a745; /* เพิ่มเส้นใต้ */
+    padding-bottom: 10px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.1);
+}
+
+button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.message {
+    margin: 20px 0;
+    padding: 12px;
+    border: 1px solid #007bff;
+    background-color: #e7f1ff;
+    color: #007bff;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+/* Align buttons in a row */
+button#showEmptyRoomsBtn, button#sortRoomsBtn {
+    width: 48%;
+    margin: 10px 1%;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+button#showEmptyRoomsBtn {
+    background-color: #007bff;
+}
+
+button#showEmptyRoomsBtn:hover {
+    background-color: #0069d9;
+}
+
+button#sortRoomsBtn {
+    background-color: #ffc107;
+}
+
+button#sortRoomsBtn:hover {
+    background-color: #e0a800;
+}
+
+/* Flexbox layout for buttons */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+/* Add styles for icons */
+.icon {
+    margin-right: 8px;
+    vertical-align: middle; /* Align icon with text */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    button {
+        font-size: 0.9rem;
+    }
+}
